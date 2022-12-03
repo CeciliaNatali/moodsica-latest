@@ -1,5 +1,5 @@
-# MOODSICA
-###***Escucha tus emociones***###
+# ♫ MOODSICA
+***Escucha tus emociones***
 # - Integrantes:
     -Pilco Padilla, Cecilia
     -Perez Muñoz, Ibañes Franklin
