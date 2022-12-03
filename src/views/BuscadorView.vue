@@ -9,6 +9,7 @@ export default {
       tag: "",
       yearmin: "",
       yearmax: "",
+      lista: "",
     };
   },
   created() {
@@ -44,8 +45,13 @@ export default {
         yearmax: this.yearmax,
         success: false,
       };
+
+      console.log(this.tag)
+      console.log(this.yearmax)
+      console.log(this.yearmin)
+
       fetch(url, {
-        method: "GET",
+        method: "POST",
         body: JSON.stringify(body),
         headers: {
           "Content-Type": "application/json",
@@ -54,7 +60,11 @@ export default {
       .then((resp) => resp.json())
       .then((data) => {
           this.success = data.success;
+          this.lista = JSON.stringify(data);
+          console.log(this.lista);
           if (this.success) {
+            sessionStorage.setItem("lista", this.lista);
+            sessionStorage.setItem("jLista", data);
             this.$router.push({ path: "/cuenta/lista" });
           }
         });
@@ -65,7 +75,7 @@ export default {
 
 <template>
   <div class="buscador">
-    <h1>{{ nombreUsuario }}</h1>
+    <h1>¡Bienvenido {{ nombreUsuario }}! 🎵</h1>
     <h2>Buscador</h2>
     <label for="tag">Mood</label><br />
     <input v-on:input="onTagInput" name="tag" id="tag" required /><br />
@@ -88,7 +98,7 @@ export default {
       required
     /><br />
     <br /><br />
-    <button @click="onBuscar">Buscar</button>
+    <button @click.stop.prevent="onBuscar">Buscar</button>
 
     <button @click="onSalir">Salir</button>
     <button @click="onEliminarCuenta" style="margin: 10px">
