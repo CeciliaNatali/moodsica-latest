@@ -1,32 +1,48 @@
-<script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true,
+<script>
+export default {
+  name: "HelloWorld",
+  props: {
+    msg: {
+      type: String,
+      required: true,
+    },
   },
-});
+};
 </script>
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+    <h1 class="pink">{{ msg }}</h1>
+    <h2>
+      Escucha tus emociones
+      <br />
+    </h2>
     <h3>
-      You’ve successfully created a project with
-      <a href="https://vitejs.dev/" target="_blank" rel="noopener">Vite</a> +
-      <a href="https://vuejs.org/" target="_blank" rel="noopener">Vue 3</a>.
+      Gracias a
+      <a
+        href="https://musicoveryb2b.mystrikingly.com/"
+        target="_blank"
+        rel="noopener"
+        >Musicovery's API</a
+      >
     </h3>
   </div>
 </template>
 
 <style scoped>
 h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
+  font-weight: 800;
+  font-size: 5.5rem;
   top: -10px;
 }
 
+h2 {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
 h3 {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 
 .greetings h1,

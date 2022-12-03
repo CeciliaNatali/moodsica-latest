@@ -9,9 +9,9 @@
 }
 
 a,
-.green {
+.pink {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
+  color: rgb(190, 62, 171);
   transition: 0.4s;
 }
 

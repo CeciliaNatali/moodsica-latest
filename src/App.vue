@@ -1,6 +1,23 @@
-<script setup>
+<script>
 import { RouterLink, RouterView } from "vue-router";
 import HelloWorld from "./components/HelloWorld.vue";
+import router from "./router/index.js";
+
+export default {
+  name: "AppComponent",
+  components: {
+    RouterLink,
+    RouterView,
+    HelloWorld,
+  },
+};
+
+router.beforeEach((to, from, next) => {
+  console.log(to);
+  console.log(from);
+  next();
+});
+
 </script>
 
 <template>
@@ -9,27 +26,31 @@ import HelloWorld from "./components/HelloWorld.vue";
       alt="Vue logo"
       class="logo"
       src="@/assets/logo.svg"
-      width="125"
-      height="125"
+      width="100"
+      height="100"
     />
 
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <HelloWorld msg="Moodsica" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/acercaDe">Acerca de</RouterLink>
+        <RouterLink to="/ingreso">Ingreso</RouterLink>
+        <RouterLink to="/registro">Registro</RouterLink>
+        <RouterLink to="/cuenta/buscador">Buscador</RouterLink>
+        <RouterLink to="/cuenta/eliminar">Eliminar cuenta</RouterLink>
+        <RouterLink to="/cuenta/actualizar">Actualizar contraseña</RouterLink>
       </nav>
     </div>
   </header>
-
   <RouterView />
 </template>
 
 <style scoped>
 header {
   line-height: 1.5;
-  max-height: 100vh;
+  max-height: 10vh;
 }
 
 .logo {
