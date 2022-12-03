@@ -12,14 +12,17 @@ Crear un diseño amigable y atractivo para el usuario.
 Identificar a cada usuario por medio de cuentas personales.
 ### REQUERIMIENTOS:
 - python pip
-- -requests
-- -Flask
-- --reder_template
-- --redirect
-- --Blueprint
-- --psycopg2
-- --os
-- --yarn/npm
-- --vue.js
-- --vue router
-- 
+- requests
+- Flask
+- reder_template
+- redirect
+- Blueprint
+- psycopg2
+- os
+- yarn/npm
+- vue.js
+- vue router
+### PATRON DE DISEÑO:
+   - patron de diseño utilizado es MVC(models, view and controllers)
+  
+(https://www.google.com/url?sa=i&url=https%3A%2F%2Fcodigofacilito.com%2Farticulos%2Fmvc-model-view-controller-explicado&psig=AOvVaw3eI_m9ZFjnVNfBAVLxX_QT&ust=1670174293503000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNjpvab63fsCFQAAAAAdAAAAABAD)
