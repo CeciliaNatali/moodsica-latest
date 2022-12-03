@@ -22,8 +22,6 @@ router.beforeEach((to, from, next) => {
 
 <template>
   <header>
-
-
     <div class="wrapper">
       <HelloWorld msg="Moodsica" />
 
