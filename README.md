@@ -1,4 +1,5 @@
-# MOOD MUSIC
+# MOODSICA
+###***Escucha tus emociones***###
 # - Integrantes:
     -Pilco Padilla, Cecilia
     -Perez Muñoz, Ibañes Franklin
